@@ -1,4 +1,5 @@
-# -AI-Agent-with-External-Tool-Access
+# Summarization Engine
+
 # 📄 PDF Summarization and RAG Q&A with LangChain and Gemini
 
 This project provides a robust solution for loading data from a PDF, segmenting the content, and using the Gemini model to answer questions or generate a summary based *only* on the information contained in the document (Retrieval Augmented Generation - RAG).
