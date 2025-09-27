@@ -40,11 +40,27 @@ pip install -U \
   chromadb
 ``` 
 ### 3.Update the script
-# summary.py (Example line)
-# Ensure you use a raw string (r"...") for Windows paths
+
 pdf_path = r"C:\Users\bhatt\Downloads\report.pdf" # <-- Use your verified, correct path
 loader = PyPDFLoader(pdf_path)
 
 ### 4. Execute
 
 python summary.py
+
+graph TD
+    A[Start: summary.py Execution] --> B(1. Load PDF File);
+
+    B --> C{2. Text Splitting};
+    C --> D(3. Generate Embeddings);
+    D --> E(4. Create/Load Vector Store);
+
+    E --> F[5. User Question];
+    F --> G(6. Embed User Question);
+    G --> H(7. Vector Store Retrieval (Similarity Search));
+
+    H --> I(8. Context Chunks);
+    I --> J(9. Construct Prompt: "Answer based on Context Chunks");
+    J --> K(10. Gemini 2.5 Flash (LLM) Invocation);
+    K --> L[11. Final Summary/Answer];
+    L --> M[End];
